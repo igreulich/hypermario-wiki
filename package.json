@@ -20,6 +20,10 @@
     "nodemon": "^2.0.15"
   },
   "scripts": {
-    "dev": "nodemon -r dotenv/config server.js"
+    "seed": "node -r ./scripts/register.cjs -r dotenv/config ./scripts/seed.js",
+    "dev": "nodemon -r ./scripts/register.cjs -r dotenv/config server.js"
+  },
+  "nodemonConfig": {
+    "ext": "*.js, *.json"
   }
 }
